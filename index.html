@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Konjic - Video Ruta</title>
+    <style>
+        /* Stilovi prilagođeni za mobilni telefon */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #121212; /* Tamna tema za bolji kontrast */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+        }
+
+        .video-container {
+            width: 100%;
+            max-width: 500px; /* Širina prosječnog telefona */
+            position: relative;
+            background: #000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .info-panel {
+            padding: 20px;
+            width: 90%;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #ff4d4d; /* Crvena boja koja prati tvoju liniju rute */
+        }
+
+        p {
+            font-size: 1rem;
+            opacity: 0.8;
+            line-height: 1.4;
+        }
+
+        /* Uklanja crne ivice na nekim mobilnim browserima */
+        video:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="video-container">
+        <video 
+            id="routeVideo"
+            autoplay 
+            muted 
+            loop 
+            playsinline 
+            controls>
+            <source src="https://od.lk/s/NzhfNzkyNTEyMDdf/mehemdcausevadzkonjic.mp4" type="video/mp4">
+            Vaš uređaj ne podržava video prikaz.
+        </video>
+    </div>
+
+    <div class="info-panel">
+        <h1>Ruta: Mehemed Čaušević dzamija</h1>
+        <p>Virtuelni prikaz rute </p>
+    </div>
+
+    <script>
+        // Osigurava da se video pokrene automatski na svim telefonima
+        document.addEventListener('DOMContentLoaded', function() {
+            var v = document.getElementById('routeVideo');
+            v.play();
+        });
+    </script>
+
+</body>
+</html>
